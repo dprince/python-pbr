@@ -41,13 +41,16 @@ rm -rf html/.{doctrees,buildinfo}
 %install
 %{__python} setup.py install --skip-build --root %{buildroot}
 
-%check
-%{__python} setup.py test
+#%check
+#%{__python} setup.py test
 
 %files
 %doc html README.rst LICENSE
 %{python_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
 %{python_sitelib}/%{pypi_name}
 %changelog
+* Tue May 28 2013 Dan Prince <dprince@redhat.com> - 0.5.10-1
+- Disable check tests for upstream builds (speed).
+
 * Thu Apr 25 2013 Matthias Runge <mrunge@redhat.com> - 0.5.8-1
 - Initial package.
