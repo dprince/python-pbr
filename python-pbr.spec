@@ -14,7 +14,7 @@ BuildRequires:  python2-devel
 BuildRequires:  python-d2to1
 BuildRequires:  python-sphinx
 BuildRequires:  python-setuptools_git
-Requires:       python-jinja
+Requires:       python-jinja2
 Requires:       python-d2to1
 Requires:       python-setuptools_git
 
@@ -52,7 +52,7 @@ rm -rf html/.{doctrees,buildinfo}
 %{python_sitelib}/%{pypi_name}
 %changelog
 * Wed Jun 5 2013 Dan Prince <dprince@redhat.com> - 0.5.10-1
-- Add dependency on jinja and d2to1.
+- Add dependency on jinja2 and d2to1.
 
 * Thu Apr 25 2013 Matthias Runge <mrunge@redhat.com> - 0.5.8-1
 - Initial package.
