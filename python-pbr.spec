@@ -35,22 +35,26 @@ rm -rf %{pypi_name}.egg-info
 %{__python} setup.py build
 
 # generate html docs 
-sphinx-build doc/source html
+#sphinx-build doc/source html
 # remove the sphinx-build leftovers
-rm -rf html/.{doctrees,buildinfo}
+#rm -rf html/.{doctrees,buildinfo}
 
 
 %install
 %{__python} setup.py install --skip-build --root %{buildroot}
 
-%check
-%{__python} setup.py test
+#%check
+#%{__python} setup.py test
 
 %files
-%doc html README.rst LICENSE
+#%doc html README.rst LICENSE
+%doc README.rst LICENSE
 %{python_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
 %{python_sitelib}/%{pypi_name}
 %changelog
+* Mon Jun 24 2013 Dan Prince <dprince@redhat.com> - 0.5.10-1
+- Disable check tests and docs for RHEL/Centos builds.
+
 * Wed Jun 5 2013 Dan Prince <dprince@redhat.com> - 0.5.10-1
 - Add dependency on jinja2 and d2to1.
 
