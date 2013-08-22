@@ -11,12 +11,7 @@ Source0:        http://pypi.python.org/packages/source/p/%{pypi_name}/%{pypi_nam
 BuildArch:      noarch
  
 BuildRequires:  python2-devel
-BuildRequires:  python-d2to1
 BuildRequires:  python-sphinx
-BuildRequires:  python-setuptools_git
-Requires:       python-jinja2
-Requires:       python-d2to1
-Requires:       python-setuptools_git
 
 %description
 PBR is a library that injects some useful and sensible default behaviors into 
@@ -51,6 +46,9 @@ rm -rf html/.{doctrees,buildinfo}
 %{python_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
 %{python_sitelib}/%{pypi_name}
 %changelog
+* Thu Aug 22 2013 Dan Prince <dprince@redhat.com> - 0.5.21-1
+- Sync with latest upstream deps.
+
 * Wed Jun 5 2013 Dan Prince <dprince@redhat.com> - 0.5.10-1
 - Add dependency on jinja2 and d2to1.
 
