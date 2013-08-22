@@ -11,12 +11,7 @@ Source0:        http://pypi.python.org/packages/source/p/%{pypi_name}/%{pypi_nam
 BuildArch:      noarch
  
 BuildRequires:  python2-devel
-BuildRequires:  python-d2to1
 BuildRequires:  python-sphinx
-BuildRequires:  python-setuptools_git
-Requires:       python-jinja2
-Requires:       python-d2to1
-Requires:       python-setuptools_git
 
 %description
 PBR is a library that injects some useful and sensible default behaviors into 
